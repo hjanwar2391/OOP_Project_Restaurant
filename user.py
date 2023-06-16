@@ -46,8 +46,12 @@ class Employee(User):
     ) -> None:
         super().__init__(name, phone, email, address)
         self.salary = salary
+        self.due = salary
         self.starting_date = starting_date
         self.department = department
+
+    def receive_salary(self):
+        self.due = 0
 
 
 class Chaf(Employee):
